@@ -33,3 +33,13 @@ exercises.c:17:34: error: expected statement before ‘)’ token
       |                                  ^
 Compilation failed
 afd9314
+Wed 13 Mar 2024 08:37:32 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘findMax’:
+exercises.c:17:34: error: expected statement before ‘)’ token
+   17 |       if(arr[i] >= elementoMayor))
+      |                                  ^
+Compilation failed
+930da07
