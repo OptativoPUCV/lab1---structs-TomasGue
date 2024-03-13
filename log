@@ -3,3 +3,13 @@ Wed 13 Mar 2024 08:32:36 PM UTC:
  tests:  0|7
 total_score: 0/70
 fd3e55c
+Wed 13 Mar 2024 08:36:04 PM UTC: 
+ exercises.c | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘findMax’:
+exercises.c:17:34: error: expected statement before ‘)’ token
+   17 |       if(arr[i] >= elementoMayor))
+      |                                  ^
+Compilation failed
+5bbab5c
