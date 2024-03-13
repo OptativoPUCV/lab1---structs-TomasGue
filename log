@@ -123,3 +123,18 @@ Wed 13 Mar 2024 09:03:36 PM UTC:
  tests:  0|6
 total_score: 10/70
 59f9890
+Wed 13 Mar 2024 09:09:19 PM UTC: 
+ exercises.c | 12 ++++++++----
+ 1 file changed, 8 insertions(+), 4 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘reverseArray’:
+exercises.c:42:7: error: ‘k’ undeclared (first use in this function)
+   42 |   for(k = 0; k < size; k++){
+      |       ^
+exercises.c:42:7: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:36:7: error: variable ‘arr2’ set but not used [-Werror=unused-but-set-variable]
+   36 |   int arr2[size];
+      |       ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+271aadc
