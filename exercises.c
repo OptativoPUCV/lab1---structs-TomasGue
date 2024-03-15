@@ -63,6 +63,7 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
         // Manejar error de asignación de memoria
         if (nuevoArr == NULL) {
             //*newSize = 0;
+            free(nuevoArr);
             return NULL;
         }
         nuevoArr[nuevaTalla] = arr[i];
