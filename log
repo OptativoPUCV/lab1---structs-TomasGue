@@ -337,3 +337,17 @@ exercises.c:93:22: error: ‘k’ is used uninitialized [-Werror=uninitialized]
 cc1: all warnings being treated as errors
 Compilation failed
 2cce0b6
+Fri 15 Mar 2024 01:24:27 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:93:9: error: ‘i’ is used uninitialized [-Werror=uninitialized]
+   93 | while(i < size1 && k < size2)
+      |       ~~^~~~~~~
+exercises.c:93:22: error: ‘k’ is used uninitialized [-Werror=uninitialized]
+   93 | while(i < size1 && k < size2)
+      |                    ~~^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+f671eae
