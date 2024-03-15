@@ -230,3 +230,29 @@ exercises.c:59:6: error: variable ‘nuevoArr’ set but not used [-Werror=unuse
 cc1: all warnings being treated as errors
 Compilation failed
 db7455c
+Fri 15 Mar 2024 12:36:41 AM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:56:17: error: expected statement before ‘)’ token
+   56 |     return NULL;)
+      |                 ^
+exercises.c:62:7: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   62 |       if(arr[i] % 2 == 0)
+      |       ^~
+exercises.c:64:9: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   64 |         nuevaTalla++;
+      |         ^~~~~~~~~~
+exercises.c:67:18: error: array subscript is not an integer
+   67 |   return nuevoArr[newSize];
+      |                  ^
+exercises.c:59:6: error: variable ‘nuevoArr’ set but not used [-Werror=unused-but-set-variable]
+   59 |  int nuevoArr[nuevaTalla];
+      |      ^~~~~~~~
+exercises.c:71:1: error: control reaches end of non-void function [-Werror=return-type]
+   71 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+a702237
