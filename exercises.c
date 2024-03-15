@@ -128,35 +128,27 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
   0 si no está ordenado, y -1 si está ordenado en orden descendente.
 */
 int checkSorted(int arr[], int size) {
-  int contadorAsc = 0;
-  int contadorDesc = 0;
+  int ascendente = 1;
+    int descendente = 1;
 
-  for(int i = 0; i < size; i++)
-    {
-      for(int k = i + 1; k < size; k++)
-        {
-          if(arr[i] >= arr[k])
-          {
-            contadorAsc++;
-            if(contadorAsc == size){
-              return -1;
-            }
-          }
-          else if(arr[i] <= arr[k])
-          {
-            contadorDesc++;
-            if(contadorDesc == size){
-              return 1;
-            }
-          }
+    for (int i = 0; i < size - 1; i++) {
+        if (arr[i] > arr[i + 1]) {
+            ascendente = 0;
+        }
+        if (arr[i] < arr[i + 1]) {
+            descendente = 0;
         }
     }
-  if(contadorAsc != size && contadorDesc != size)
-  {
-    return 0;
-  }
 
+    if (ascendente) {
+        return 1;
+    } else if (descendente) {
+        return -1;
+    } else {
+        return 0;
+    }
 }
+
 
 /*
 Ejercicio 6: Información de una Biblioteca
