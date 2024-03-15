@@ -52,19 +52,24 @@ los números pares del arreglo original.
 */
 int *filterEvenNumbers(int arr[], int size, int *newSize)
 {
+  //Precondicional
   if(arr == NULL ||newSize == NULL || newSize <= 0) {
-    return NULL;)
+    return NULL;
   }
+  //Aumentar memoria
  int nuevaTalla = 0;
- int nuevoArr[nuevaTalla];
+ int *nuevoArr = NULL;
   for(int i = 0; i < size; i++)
     {
       if(arr[i] % 2 == 0)
+      {
+        int *nuevoArr = realloc(nuevoArr, sizeof(int) * (nuevaTalla + 1));
         nuevoArr[nuevaTalla] = arr[i];
         nuevaTalla++;
+      }
     }
   *newSize = nuevaTalla;
-  return nuevoArr[newSize];
+  return nuevoArr;
   
   
   //return NULL; 
