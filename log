@@ -312,3 +312,14 @@ Fri 15 Mar 2024 12:58:01 AM UTC:
  tests:  0|4
 total_score: 30/70
 2ebdb97
+Fri 15 Mar 2024 01:08:55 AM UTC: 
+ exercises.c | 36 +++++++++++++++++++++++++++++++++++-
+ 1 file changed, 35 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:90:5: error: variable ‘nuevoArr’ set but not used [-Werror=unused-but-set-variable]
+   90 | int nuevoArr[nuevoTamano];
+      |     ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+6f04431
