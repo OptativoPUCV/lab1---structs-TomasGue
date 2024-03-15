@@ -323,3 +323,17 @@ exercises.c:90:5: error: variable ‘nuevoArr’ set but not used [-Werror=unuse
 cc1: all warnings being treated as errors
 Compilation failed
 6f04431
+Fri 15 Mar 2024 01:22:38 AM UTC: 
+ exercises.c | 31 +++++++++++++++++--------------
+ 1 file changed, 17 insertions(+), 14 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:93:9: error: ‘i’ is used uninitialized [-Werror=uninitialized]
+   93 | while(i < size1 && k < size2)
+      |       ~~^~~~~~~
+exercises.c:93:22: error: ‘k’ is used uninitialized [-Werror=uninitialized]
+   93 | while(i < size1 && k < size2)
+      |                    ~~^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2cce0b6

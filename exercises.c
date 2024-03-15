@@ -78,7 +78,7 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
   
 }
 
-/*
+/*+
 Ejercicio 4: Fusión de dos Arreglos Ordenados
 Descripción: Escribe una función que tome dos arreglos
 ordenados y sus tamaños, y luego fusione estos dos
@@ -88,37 +88,40 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
                        int result[]) {
 int nuevoTamano = size1 + size2;
 int nuevoArr[nuevoTamano];
-while(1)
+int i, k, j = 0;
+ 
+while(i < size1 && k < size2)
   {
-    int i = 0;
-    int k = 0;
-    int j = 0;
-
-    if(arr1[i] < arr2[k])
+    if(arr1[i] <= arr2[k])
     {
       nuevoArr[j] = arr1[i];
       i++;
-      j++;
     }
-    else if(arr1[i] > arr2[k])
+    else
     {
       nuevoArr[j] = arr2[k];
       k++;
-      j++;
     }
-    else if(arr1[i] == arr2[k])
-    {
-      nuevoArr[j] = arr1[i];
-      j++;
-      i++;
-      nuevoArr[j] = arr2[k];
-      j++;
-      k++;
-    }
-    if(j == nuevoTamano)
-      break;
+    j++;
   }
-  return;
+//Comprobar si sobran elementos para agregarlos
+  while(i < size1)
+    {
+      nuevoArr[j] = arr1[i];
+      j++;
+      i++;
+    }
+  while(k < size2)
+    {
+      nuevoArr[j] = arr2[k];
+      j++;
+      i++;
+    }
+  //Copiar el nuevo arreglo en el arreglo original
+  for(int indice = 0; indice < nuevoTamano; indice++)
+    {
+      result[indice] = nuevoArr[indice];
+    }
 }                       
 
 /*
