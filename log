@@ -351,3 +351,9 @@ exercises.c:93:22: error: ‘k’ is used uninitialized [-Werror=uninitialized]
 cc1: all warnings being treated as errors
 Compilation failed
 f671eae
+Fri 15 Mar 2024 01:26:20 AM UTC: 
+ exercises.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+ tests:  0|4
+total_score: 30/70
+dfed831

@@ -88,7 +88,9 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
                        int result[]) {
 int nuevoTamano = size1 + size2;
 int nuevoArr[nuevoTamano];
-int i, k, j = 0;
+int i = 0;
+int j = 0;
+int k = 0;
  
 while(i < size1 && k < size2)
   {
@@ -115,7 +117,7 @@ while(i < size1 && k < size2)
     {
       nuevoArr[j] = arr2[k];
       j++;
-      i++;
+      k++;
     }
   //Copiar el nuevo arreglo en el arreglo original
   for(int indice = 0; indice < nuevoTamano; indice++)
