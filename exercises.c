@@ -50,28 +50,33 @@ Descripción: Escribe una función que tome un arreglo de enteros
 y su tamaño, y luego devuelva un nuevo arreglo que contenga solo
 los números pares del arreglo original.
 */
-int *filterEvenNumbers(int arr[], int size, int *newSize)
-{
-  //Aumentar memoria
- int nuevaTalla = 0;
- int *nuevoArr = NULL;
-  for(int i = 0; i < size; i++)
-    {
-      if(arr[i] % 2 == 0)
-      {
-        nuevoArr = realloc(nuevoArr, sizeof(int) * (nuevaTalla + 1));
+int *filterEvenNumbers(int arr[], int size, int *newSize) {
+    // Inicializar el nuevo arreglo con malloc
+    int nuevaTalla = 0;
+    int *nuevoArr = malloc(sizeof(int) * nuevaTalla);
+    if (nuevoArr == NULL) {
         // Manejar error de asignación de memoria
-        if (nuevoArr == NULL) {
-            //*newSize = 0;
-            return NULL;
-        }
-        nuevoArr[nuevaTalla] = arr[i];
-        nuevaTalla++;
-      }
+        return NULL;
     }
-  *newSize = nuevaTalla;
-  return nuevoArr;
+
+    for (int i = 0; i < size; i++) {
+        if (arr[i] % 2 == 0) {
+            // Aumentar memoria con realloc
+            nuevoArr = realloc(nuevoArr, sizeof(int) * (nuevaTalla + 1));
+            if (nuevoArr == NULL) {
+                // Manejar error de asignación de memoria
+                free(nuevoArr); // Liberar la memoria asignada previamente
+                return NULL;
+            }
+            nuevoArr[nuevaTalla] = arr[i];
+            nuevaTalla++;
+        }
+    }
+
+    *newSize = nuevaTalla;
+    return nuevoArr;
 }
+
 
 /*+
 Ejercicio 4: Fusión de dos Arreglos Ordenados
