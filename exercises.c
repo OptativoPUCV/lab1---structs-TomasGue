@@ -53,9 +53,7 @@ los números pares del arreglo original.
 int *filterEvenNumbers(int arr[], int size, int *newSize)
 {
   //Precondicional
-  if(arr == NULL ||newSize == NULL || *newSize <= 0) {
-    return NULL;
-  }
+
   //Aumentar memoria
  int nuevaTalla = 0;
  int *nuevoArr = NULL;
