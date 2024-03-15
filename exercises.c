@@ -74,11 +74,8 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
       }
     }
   *newSize = nuevaTalla;
-  free(nuevoArr);
   return nuevoArr;
   
-  
-  //return NULL; 
 }
 
 /*
