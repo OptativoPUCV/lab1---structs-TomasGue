@@ -181,3 +181,26 @@ exercises.c:64:10: error: function returns address of local variable [-Werror=re
 cc1: all warnings being treated as errors
 Compilation failed
 f7a05f9
+Fri 15 Mar 2024 12:32:25 AM UTC: 
+ exercises.c | 3 +++
+ 1 file changed, 3 insertions(+)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:56:5: error: ‘return’ with no value, in function returning non-void [-Werror=return-type]
+   56 |     return;
+      |     ^~~~~~
+exercises.c:53:6: note: declared here
+   53 | int *filterEvenNumbers(int arr[], int size, int *newSize)
+      |      ^~~~~~~~~~~~~~~~~
+exercises.c:62:7: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   62 |       if(arr[i] % 2 == 0)
+      |       ^~
+exercises.c:64:9: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   64 |         nuevaTalla++;
+      |         ^~~~~~~~~~
+exercises.c:67:10: error: function returns address of local variable [-Werror=return-local-addr]
+   67 |   return nuevoArr;
+      |          ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+448c051
