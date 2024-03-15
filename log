@@ -399,3 +399,14 @@ Fri 15 Mar 2024 02:01:23 AM UTC:
  tests:  0|3
 total_score: 40/70
 8592079
+Fri 15 Mar 2024 02:07:52 AM UTC: 
+ exercises.c | 27 ++++++++++++++++-----------
+ 1 file changed, 16 insertions(+), 11 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:159:1: error: control reaches end of non-void function [-Werror=return-type]
+  159 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+c68ee92

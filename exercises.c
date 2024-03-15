@@ -128,29 +128,34 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
   0 si no está ordenado, y -1 si está ordenado en orden descendente.
 */
 int checkSorted(int arr[], int size) {
-  int indicadorAscendente = 1;
-  int indicadorDescendente = 1;
+  int contadorAsc = 0;
+  int contadorDesc = 0;
 
   for(int i = 0; i < size; i++)
     {
       for(int k = i + 1; k < size; k++)
         {
-          if(arr[i] > arr[k]) //Quiere decir que no esta ascendente
+          if(arr[i] >= arr[k])
           {
-            indicadorAscendente = 0;
+            contadorAsc++;
+            if(contadorAsc == size){
+              return -1;
+            }
           }
-          else if(arr[i] < arr[k]) //Quiere decir que no esta descendente
+          else if(arr[i] <= arr[k])
           {
-            indicadorDescendente = 0;
+            contadorDesc++;
+            if(contadorDesc == size){
+              return 1;
+            }
           }
         }
     }
-  if(indicadorAscendente)
-      return 1;
-  else if(indicadorDescendente)
-      return -1;
-  else
-      return 0;
+  if(contadorAsc != size && contadorDesc != size)
+  {
+    return 0;
+  }
+
 }
 
 /*
