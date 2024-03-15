@@ -267,3 +267,24 @@ exercises.c:66:25: error: ‘nuevoArr’ may be used uninitialized in this funct
 cc1: all warnings being treated as errors
 Compilation failed
 6aa51cf
+Fri 15 Mar 2024 12:51:06 AM UTC: 
+ exercises.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:66:25: error: ‘nuevoArr’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+   66 |         int *nuevoArr = realloc(nuevoArr, sizeof(int) * (nuevaTalla + 1));
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+Fri 15 Mar 2024 12:51:07 AM UTC: 
+ exercises.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:66:25: error: ‘nuevoArr’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+   66 |         int *nuevoArr = realloc(nuevoArr, sizeof(int) * (nuevaTalla + 1));
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+3d96289
