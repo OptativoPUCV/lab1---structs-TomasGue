@@ -63,7 +63,7 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
     {
       if(arr[i] % 2 == 0)
       {
-        int *nuevoArr = realloc(nuevoArr, sizeof(int) * (nuevaTalla + 1));
+        nuevoArr = realloc(nuevoArr, sizeof(int) * (nuevaTalla + 1));
         if (nuevoArr == NULL) {
             // Manejar error de asignación de memoria
             free(nuevoArr);
