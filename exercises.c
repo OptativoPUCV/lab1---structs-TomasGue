@@ -142,32 +142,26 @@ int checkSorted(int arr[], int size) {
   int contadorAsc = 0;
   int contadorDesc = 0;
 
-  for(int i = 0; i < size; i++)
+  for(int i = 0; i < size - 1; i++)
     {
-      for(int k = i + 1; k < size; k++)
-        {
-          if(arr[i] > arr[k])
+        if(arr[i] >= arr[i + 1])
           {
             contadorAsc++;
           }
           else
             break;
-        }
     }
-  for(int i = 0; i < size; i++)
+  for(int i = 0; i < size - 1; i++)
     {
-      for(int k = i + 1; k < size; k++)
-        {
-          if(arr[i] < arr[k])
+      if(arr[i] <= arr[i + 1])
           {
             contadorDesc++;
           }
-        }
     }
   
-  if(contadorAsc == size)
+  if(contadorAsc == size - 1)
     return -1;
-  else if(contadorDesc == size)
+  else if(contadorDesc == size - 1)
     return 1;
   else
     return 0;
