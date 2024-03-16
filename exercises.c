@@ -146,7 +146,7 @@ int checkSorted(int arr[], int size) {
     {
       for(int k = i + 1; k < size; k++)
         {
-          if(arr[i] >= arr[k])
+          if(arr[i] > arr[k])
           {
             contadorAsc++;
           }
@@ -158,7 +158,7 @@ int checkSorted(int arr[], int size) {
     {
       for(int k = i + 1; k < size; k++)
         {
-          if(arr[i] <= arr[k])
+          if(arr[i] < arr[k])
           {
             contadorDesc++;
           }
