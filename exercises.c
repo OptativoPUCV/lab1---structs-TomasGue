@@ -221,7 +221,7 @@ Nodo *crearListaEnlazada(int arr[], int size)
 
   for(int i = 0; i < size; i++)
     {
-      Nodo *nuevoNodo = (Nodo *)malloc(sizeof(Nodo); //Reservo memoria para cada elemento en el arr
+      Nodo *nuevoNodo = (Nodo *)malloc(sizeof(Nodo)); //Reservo memoria para cada elemento en el arr
       nuevoNodo->numero = arr[i]; //Almaceno el numero en el nodo, accediendo a su campo numero
       nuevoNodo->siguiente = NULL;
 
