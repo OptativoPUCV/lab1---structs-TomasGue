@@ -574,3 +574,27 @@ exercises.c:167:1: error: control reaches end of non-void function [-Werror=retu
 cc1: all warnings being treated as errors
 Compilation failed
 3b437b2
+Sat 16 Mar 2024 03:09:50 AM UTC: 
+ exercises.c | 12 ++++++++----
+ 1 file changed, 8 insertions(+), 4 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:169:1: error: control reaches end of non-void function [-Werror=return-type]
+  169 | }
+      | ^
+exercises.c: In function ‘inicializarLibro’:
+exercises.c:195:3: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+  195 |   scanf("%s", libro->titulo);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+exercises.c:196:3: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+  196 |   scanf(" %s", libro->autor.nombre);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+exercises.c:197:3: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+  197 |   scanf(" %d", &libro->autor.anioNacimiento);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+exercises.c:198:3: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+  198 |   scanf("%d", &libro->anioPublicacion);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+4ae72a7

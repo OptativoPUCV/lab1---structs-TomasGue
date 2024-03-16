@@ -60,11 +60,13 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
         contadorPares++;
       }
     }
+  
   int *arr2 = (int *)malloc(contadorPares * sizeof(int));
   if(arr2 == NULL)
   {
     return NULL;
   }
+  
   int indice = 0;
   for(int k = 0; k < size; k++)
     {
@@ -188,10 +190,14 @@ typedef struct {
 
 void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
                       int anioNacimiento, int anioPublicacion) {
-  strcpy(libro->titulo, titulo);
-  strcpy(libro->autor.nombre, nombreAutor);
-  libro->autor.anioNacimiento = anioNacimiento;
-  libro->anioPublicacion = anioPublicacion;
+  //strcpy(libro->titulo, titulo);
+  //strcpy(libro->autor.nombre, nombreAutor);
+  scanf("%s", libro->titulo);
+  scanf(" %s", libro->autor.nombre);
+  scanf(" %d", &libro->autor.anioNacimiento);
+  scanf("%d", &libro->anioPublicacion);
+  //libro->autor.anioNacimiento = anioNacimiento;
+  //libro->anioPublicacion = anioPublicacion;
   
 }
 
