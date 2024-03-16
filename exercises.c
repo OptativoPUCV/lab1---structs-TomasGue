@@ -223,16 +223,17 @@ Nodo *crearListaEnlazada(int arr[], int size)
     {
       Nodo *nuevoNodo = (Nodo *)malloc(sizeof(Nodo)); //Reservo memoria para cada elemento en el arr
       nuevoNodo->numero = arr[i]; //Almaceno el numero en el nodo, accediendo a su campo numero
-      nuevoNodo->siguiente = NULL;
+      nuevoNodo->siguiente = NULL;//Al siguiente nodo lo inicializo en Null
 
-      if(cabeza == NULL){
-        cabeza = nuevoNodo;
-        ultimo = nuevoNodo;
+      if(cabeza == NULL){ //Si la cabeza es Null, entonces el primer elemento es el nuevo nodo
+        cabeza = nuevoNodo; //El nuevo nodo es la cabeza, pues es la primera vez que se crea
+        ultimo = nuevoNodo; //Y al ser el unico a su veces, es el ultimo
       }
       else{
-        ultimo->siguiente = nuevoNodo;
-        ultimo = nuevoNodo;
+        ultimo->siguiente = nuevoNodo; //Si no es el primero, entonces el ultimo nodo apunta al nuevo nodo
+        ultimo = nuevoNodo; //El nuevo nodo es el ultimo
+      }
+      
       }   
-   }
   return cabeza;
 }
