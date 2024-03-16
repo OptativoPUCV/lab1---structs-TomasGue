@@ -669,3 +669,42 @@ Sat 16 Mar 2024 03:38:01 AM UTC:
  tests:  0|1
 total_score: 60/70
 f00823f
+Sat 16 Mar 2024 05:10:44 AM UTC: 
+ exercises.c | 23 ++++++++++++++++++++++-
+ 1 file changed, 22 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘crearListaEnlazada’:
+exercises.c:224:52: error: expected ‘)’ before ‘;’ token
+  224 |       Nodo *nuevoNodo = (Nodo *)malloc(sizeof(Nodo); //Reservo memoria para cada elemento en el arr
+      |                                       ~            ^
+      |                                                    )
+exercises.c:236:4: error: expected ‘,’ or ‘;’ before ‘}’ token
+  236 |    }
+      |    ^
+exercises.c:224:13: error: unused variable ‘nuevoNodo’ [-Werror=unused-variable]
+  224 |       Nodo *nuevoNodo = (Nodo *)malloc(sizeof(Nodo); //Reservo memoria para cada elemento en el arr
+      |             ^~~~~~~~~
+test.c:382:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  382 | int main(int argc, char *argv[]) {
+      |     ^~~~
+test.c:410:1: error: expected declaration or statement at end of input
+  410 | }
+      | ^
+test.c:7:6: error: unused variable ‘msg’ [-Werror=unused-variable]
+    7 | char msg[300];
+      |      ^~~
+In file included from test.c:1:
+exercises.c:220:9: error: unused variable ‘ultimo’ [-Werror=unused-variable]
+  220 |   Nodo *ultimo = NULL;
+      |         ^~~~~~
+test.c:411: error: control reaches end of non-void function [-Werror=return-type]
+At top level:
+test.c:382:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  382 | int main(int argc, char *argv[]) {
+      |     ^~~~
+test.c:47:6: error: ‘readIntArray’ defined but not used [-Werror=unused-function]
+   47 | void readIntArray(int arr[], int *size) {
+      |      ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+bee6bad
