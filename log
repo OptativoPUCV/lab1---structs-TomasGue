@@ -548,3 +548,18 @@ exercises.c:161:1: error: control reaches end of non-void function [-Werror=retu
 cc1: all warnings being treated as errors
 Compilation failed
 6caca5a
+Sat 16 Mar 2024 02:57:11 AM UTC: 
+ exercises.c | 28 +++++++++++++++-------------
+ 1 file changed, 15 insertions(+), 13 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:76:10: error: function returns address of local variable [-Werror=return-local-addr]
+   76 |   return arr2;
+      |          ^~~~
+exercises.c: In function ‘checkSorted’:
+exercises.c:163:1: error: control reaches end of non-void function [-Werror=return-type]
+  163 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+91757c2
