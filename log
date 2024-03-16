@@ -493,3 +493,47 @@ exercises.c:161:1: error: control reaches end of non-void function [-Werror=retu
 cc1: all warnings being treated as errors
 Compilation failed
 7f34e98
+Sat 16 Mar 2024 02:42:51 AM UTC: 
+ exercises.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘inicializarLibro’:
+exercises.c:185:25: error: passing argument 2 of ‘strcpy’ makes pointer from integer without a cast [-Werror=int-conversion]
+  185 |   strcpy(libro->titulo, *titulo);
+      |                         ^~~~~~~
+      |                         |
+      |                         char
+In file included from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/features.h:490,
+                 from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/ctype.h:25,
+                 from exercises.c:1,
+                 from test.c:1:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/bits/string_fortified.h:77:1: note: expected ‘const char * restrict’ but argument is of type ‘char’
+   77 | __NTH (strcpy (char *__restrict __dest, const char *__restrict __src))
+      | ^~~~~
+In file included from test.c:1:
+exercises.c:186:31: error: passing argument 2 of ‘strcpy’ makes pointer from integer without a cast [-Werror=int-conversion]
+  186 |   strcpy(libro->autor.nombre, *nombreAutor);
+      |                               ^~~~~~~~~~~~
+      |                               |
+      |                               char
+In file included from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/features.h:490,
+                 from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/ctype.h:25,
+                 from exercises.c:1,
+                 from test.c:1:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/bits/string_fortified.h:77:1: note: expected ‘const char * restrict’ but argument is of type ‘char’
+   77 | __NTH (strcpy (char *__restrict __dest, const char *__restrict __src))
+      | ^~~~~
+In file included from test.c:1:
+exercises.c:187:33: error: invalid type argument of unary ‘*’ (have ‘int’)
+  187 |   libro->autor.anioNacimiento = *anioNacimiento;
+      |                                 ^~~~~~~~~~~~~~~
+exercises.c:188:28: error: invalid type argument of unary ‘*’ (have ‘int’)
+  188 |   libro->anioPublicacion = *anioPublicacion;
+      |                            ^~~~~~~~~~~~~~~~
+exercises.c: In function ‘checkSorted’:
+exercises.c:161:1: error: control reaches end of non-void function [-Werror=return-type]
+  161 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+f897839
