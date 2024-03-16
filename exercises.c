@@ -151,14 +151,12 @@ int checkSorted(int arr[], int size) {
             contadorAsc++;
             //if(contadorAsc == size){
               //return -1;
-            }
           }
           else if(arr[i] <= arr[k])
           {
             contadorDesc++;
             //if(contadorDesc == size){
               //return 1;
-            }
           }
         }
     }
