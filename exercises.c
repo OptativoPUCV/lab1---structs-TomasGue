@@ -60,7 +60,11 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
         contadorPares++;
       }
     }
-  int arr2[contadorPares];
+  int *arr2 = (int *)malloc(contadorPares * sizeof(int));
+  if(arr2 == NULL)
+  {
+    return NULL;
+  }
   int indice = 0;
   for(int k = 0; k < size; k++)
     {
