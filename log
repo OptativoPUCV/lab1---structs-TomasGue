@@ -610,3 +610,38 @@ Sat 16 Mar 2024 03:18:51 AM UTC:
  tests:  0|2
 total_score: 50/70
 ab4c7b4
+Sat 16 Mar 2024 03:25:44 AM UTC: 
+ exercises.c | 13 +++++++++----
+ 1 file changed, 9 insertions(+), 4 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:156:11: error: ‘else’ without a previous ‘if’
+  156 |           else if(arr[i] <= arr[k])
+      |           ^~~~
+exercises.c:156:33: error: ‘k’ undeclared (first use in this function)
+  156 |           else if(arr[i] <= arr[k])
+      |                                 ^
+exercises.c:156:33: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c: At top level:
+exercises.c:164:5: error: expected identifier or ‘(’ before ‘}’ token
+  164 |     }
+      |     ^
+exercises.c:165:3: error: expected identifier or ‘(’ before ‘if’
+  165 |   if(contadorAsc == size)
+      |   ^~
+exercises.c:167:3: error: expected identifier or ‘(’ before ‘else’
+  167 |   else if(contadorDesc == size)
+      |   ^~~~
+exercises.c:169:3: error: expected identifier or ‘(’ before ‘else’
+  169 |   else
+      |   ^~~~
+exercises.c:171:1: error: expected identifier or ‘(’ before ‘}’ token
+  171 | }
+      | ^
+exercises.c: In function ‘checkSorted’:
+exercises.c:163:9: error: control reaches end of non-void function [-Werror=return-type]
+  163 |         }
+      |         ^
+cc1: all warnings being treated as errors
+Compilation failed
+536b714
