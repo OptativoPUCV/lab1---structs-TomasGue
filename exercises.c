@@ -53,7 +53,8 @@ los números pares del arreglo original.
 int *filterEvenNumbers(int arr[], int size, int *newSize)
 {
   //Aumentar memoria
- int nuevaTalla = 0;
+ int nuevaTalla = 0; //talla para redimensionar el arreglo a medida que se encuentren pares
+  
  int *nuevoArr = NULL;
   for(int i = 0; i < size; i++)
     {
@@ -62,7 +63,6 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
         nuevoArr = realloc(nuevoArr, sizeof(int) * (nuevaTalla + 1));
         // Manejar error de asignación de memoria
         if (nuevoArr == NULL) {
-            //*newSize = 0;
             free(nuevoArr);
             return NULL;
         }
